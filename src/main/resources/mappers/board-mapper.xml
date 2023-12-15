@@ -3,12 +3,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Board">
     <insert id="insertBoard">
-        insert into BOARD (title, writer, content, place)
-        values (#{title}, #{writer}, #{content}, #{place})
+        insert into BOARD (title, writer, content, place, weather, feel, person)
+        values (#{title}, #{writer}, #{content}, #{place}, #{weather}, #{feel}, #{person})
     </insert>
     <update id="updateBoard">
         update BOARD
-        set title=#{title}, content=#{content}, writer=#{writer}, place=#{place} where seq=#{seq}
+        set title=#{title}, content=#{content}, writer=#{writer}, place=#{place}, weather=#{weather}, feel=#{feel}, person=#{person} where seq=#{seq}
     </update>
     <delete id="deleteBoard">
         delete from BOARD where seq=#{seq}

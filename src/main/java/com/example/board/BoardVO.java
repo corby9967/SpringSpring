@@ -5,9 +5,10 @@ import java.util.Date;
 public class BoardVO {
 	private int seq;
 	private String title;
-	private Date date;
+	private Date regdate;
 	private String place;
-	private String with;
+	private String person;
+
 	private String weather;
 	private String feel;
 	private String writer;
@@ -30,11 +31,11 @@ public class BoardVO {
 	}
 
 	public Date getDate() {
-		return date;
+		return regdate;
 	}
 
 	public void setDate(Date date) {
-		this.date = date;
+		this.regdate = date;
 	}
 
 	public String getPlace() {
@@ -46,11 +47,11 @@ public class BoardVO {
 	}
 
 	public String getWith() {
-		return with;
+		return person;
 	}
 
 	public void setWith(String with) {
-		this.with = with;
+		this.person = with;
 	}
 
 	public String getWeather() {
