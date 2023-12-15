@@ -29,12 +29,13 @@ public class BoardController {
     }
 
     @RequestMapping(value = "/addok", method = RequestMethod.POST)
-    public String addPostOK(BoardVO vo){
-        if (boardService.insertBoard(vo) == 0){
+    public String addPostOk(BoardVO vo) {
+        int i = boardService.insertBoard(vo);
+        if(i == 0){
             System.out.println("데이터 추가 실패");
-        } else {
-            System.out.println("데이터 추가 성공!");
         }
+        else
+            System.out.println("데이터 추가 성공");
         return "redirect:list";
     }
 
@@ -58,9 +59,9 @@ public class BoardController {
     @RequestMapping(value = "/editok", method = RequestMethod.POST)
     public String editPostOK(BoardVO vo){
         if (boardService.updateBoard(vo) == 0){
-            System.out.println("데이터 추가 실패");
+            System.out.println("데이터 수정 실패");
         } else {
-            System.out.println("데이터 추가 성공!");
+            System.out.println("데이터 수정 성공!");
         }
         return "redirect:list";
     }

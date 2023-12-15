@@ -5,9 +5,11 @@
   Time: 4:05 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false"
          pageEncoding="UTF-8"%>
 <%@page import="com.example.board.BoardDAO, com.example.board.BoardVO,java.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,18 +42,13 @@
 </div>
 <br>
 <div class="col-6 col-s-9">
-
-  <p>
-    <b>Category</b><br>${u.getCategory()}<br><br>
-    <b>Title</b><br>${b.getTitle()}<br><br>
-    <b>Writer</b><br>${b.getWriter()}<br><br>
-    <b>Content</b><br>${b.getContent()}<br><br>
-  <p>
-
+  <b>Title</b><br>${boardVO.getTitle()}<br><br>
+  <b>Writer</b><br>${boardVO.getWriter()}<br><br>
+  <b>Content</b><br>${boardVO.getContent()}<br><br>
+  <a href="../editform/${boardVO.getSeq()}">수정</a>
+  <a href="../deleteok/${boardVO.getSeq()}">삭제</a>
 </div>>
 
-<a href="editform/${b.getSeq()}">수정</a>
-<a href="javascript:delete_ok('${b.getSeq()}')">삭제</a>
 
 </body>
 </html>
