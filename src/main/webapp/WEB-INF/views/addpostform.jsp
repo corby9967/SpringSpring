@@ -12,7 +12,7 @@
 <form action="addok" method="post">
     <table id="edit">
         <tr><td>제목:</td><td><input type="text" name="title"/></td></tr>
-        <tr><td>날짜:</td><td><input type="text" name="date"/></td></tr>
+<%--        <tr><td>날짜:</td><td><input type="date" name="date"/></td></tr>--%>
         <tr><td>글쓴이:</td><td><input type="text" name="writer"/></td></tr>
         <tr><td>장소:</td><td><input type="text" name="place"/></td></tr>
         <tr><td>함께한 사람:</td><td><input type="text" name="with"/></td></tr>

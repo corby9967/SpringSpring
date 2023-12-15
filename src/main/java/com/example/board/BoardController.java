@@ -30,12 +30,11 @@ public class BoardController {
 
     @RequestMapping(value = "/addok", method = RequestMethod.POST)
     public String addPostOk(BoardVO vo) {
-        int i = boardService.insertBoard(vo);
-        if(i == 0){
+        if(boardService.insertBoard(vo) == 0){
             System.out.println("데이터 추가 실패");
-        }
-        else
+        } else{
             System.out.println("데이터 추가 성공");
+        }
         return "redirect:list";
     }
 
@@ -69,9 +68,9 @@ public class BoardController {
     @RequestMapping(value = "/deleteok/{id}", method = RequestMethod.GET)
     public String deletePostOK(@PathVariable("id") int id){
         if (boardService.deleteBoard(id) == 0){
-            System.out.println("데이터 추가 실패");
+            System.out.println("데이터 삭제 실패");
         } else {
-            System.out.println("데이터 추가 성공!");
+            System.out.println("데이터 삭제 성공!");
         }
         return "redirect:../list";
     }
