@@ -41,17 +41,17 @@
 <br>
 <div class="col-6 col-s-9">
 
-    <p>
-      <b>Category</b><br>${u.getCategory()}<br><br>
-      <b>Title</b><br>${b.getTitle()}<br><br>
-      <b>Writer</b><br>${b.getWriter()}<br><br>
-      <b>Content</b><br>${b.getContent()}<br><br>
+  <p>
+    <b>Category</b><br>${u.getCategory()}<br><br>
+    <b>Title</b><br>${b.getTitle()}<br><br>
+    <b>Writer</b><br>${b.getWriter()}<br><br>
+    <b>Content</b><br>${b.getContent()}<br><br>
   <p>
 
 </div>>
 
-<a href="editform/${b.getSeq()}">Edit</a>
-<a href="javascript:delete_ok('${b.getSeq()}')">Delete</a>
+<a href="editform/${b.getSeq()}">수정</a>
+<a href="javascript:delete_ok('${b.getSeq()}')">삭제</a>
 
 </body>
 </html>
